@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Github Job Search</string>
+    <string name="enter_a_technology_to_search_for_job">Enter a Technology to Search for Job</string>
+    <string name="job_search">Job Search</string>
+    <string name="can_t_go_to_next_activity_without_entering_technology">can\'t go to next activity without entering technology</string>
+    <string name="search">search</string>
+    <string name="job_title">Job Title</string>
+    <string name="location">location</string>
+    <string name="how_to_apply">how to apply</string>
+    <string name="network">Try Again After getting Network</string>
+    <string name="u">Unavailable</string>
+    <string name="c">Couldn\'t Fetch Data</string>
+    <string name="ok">ok</string>
+
+</resources>

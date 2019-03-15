@@ -1,7 +1,9 @@
 package com.example.bharathi.jandhyala.githubjobsearch;
 
-public class JobModel {
-    String job,loc,apply;
+class JobModel {
+    private String job;
+    private String loc;
+    private String apply;
 
     public JobModel(String titleOfJob, String locationOfJob, String howToApply) {
         this.job=titleOfJob;

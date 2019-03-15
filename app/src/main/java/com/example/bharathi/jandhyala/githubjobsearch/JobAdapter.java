@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobHolder> {
 
-    private JobSearchActivity jobSearchActivity;
-    private ArrayList<JobModel> jobModels;
+    private final JobSearchActivity jobSearchActivity;
+    private final ArrayList<JobModel> jobModels;
 
     public JobAdapter(JobSearchActivity jobSearchActivity, ArrayList<JobModel> jobModels) {
         this.jobSearchActivity = jobSearchActivity;
@@ -39,8 +39,10 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobHolder> {
     }
 
     public class JobHolder extends RecyclerView.ViewHolder {
-        TextView jobTitlleView,locationView,howToApplyView;
-        public JobHolder(@NonNull View itemView) {
+        final TextView jobTitlleView;
+        final TextView locationView;
+        final TextView howToApplyView;
+        JobHolder(@NonNull View itemView) {
             super( itemView );
             jobTitlleView=itemView.findViewById( R.id.jobTitle );
             locationView=itemView.findViewById( R.id.location);

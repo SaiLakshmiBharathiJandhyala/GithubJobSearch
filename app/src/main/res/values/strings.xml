@@ -10,6 +10,6 @@
     <string name="network">Try Again After getting Network</string>
     <string name="u">Unavailable</string>
     <string name="c">Couldn\'t Fetch Data</string>
-    <string name="ok">ok</string>
+    <string name="ok">OK</string>
 
 </resources>

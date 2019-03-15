@@ -10,7 +10,9 @@
         android:id="@+id/edit_job_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_a_technology_to_search_for_job" />
+        android:hint="@string/enter_a_technology_to_search_for_job"
+        android:inputType=""
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/job_search_button"

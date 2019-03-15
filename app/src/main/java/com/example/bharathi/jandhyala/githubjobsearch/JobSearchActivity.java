@@ -1,5 +1,6 @@
 package com.example.bharathi.jandhyala.githubjobsearch;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.AsyncTaskLoader;
@@ -29,12 +30,12 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
 public class JobSearchActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>{
-    ProgressBar progressBar;
-    RecyclerView recyclerView;
+    private ProgressBar progressBar;
+    private RecyclerView recyclerView;
     private static final int LOADER_ID=3054;
-    String jobsearchurl;
-    ArrayList<JobModel> jobModels;
-    ConnectivityManager connectivityManager;
+    private String jobsearchurl;
+    private ArrayList<JobModel> jobModels;
+    private ConnectivityManager connectivityManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -54,11 +55,11 @@ public class JobSearchActivity extends AppCompatActivity implements LoaderManage
         }
     }
 
-    boolean connectionCheck() {
+    private boolean connectionCheck() {
         return connectivityManager.getNetworkInfo( ConnectivityManager.TYPE_MOBILE ).getState() == NetworkInfo.State.CONNECTED ||
                 connectivityManager.getNetworkInfo( ConnectivityManager.TYPE_WIFI ).getState() == NetworkInfo.State.CONNECTED;
     }
-    void isOnline()
+    private void isOnline()
     {
         AlertDialog.Builder dialog=new AlertDialog.Builder( this );
         dialog.setTitle( "Connectivty" );
@@ -76,6 +77,7 @@ public class JobSearchActivity extends AppCompatActivity implements LoaderManage
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     @Override
     public Loader<String> onCreateLoader(int id, Bundle args) {
         return new AsyncTaskLoader<String>(this) {
@@ -148,7 +150,7 @@ public class JobSearchActivity extends AppCompatActivity implements LoaderManage
 
     }
 
-    void dataNotFound()
+    private void dataNotFound()
     {
         progressBar.setVisibility( GONE );
         AlertDialog.Builder dialog=new AlertDialog.Builder( this );

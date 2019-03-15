@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText technologyET;
-    Button jobSearchButton;
-    String value;
+    private EditText technologyET;
+    private Button jobSearchButton;
+    private String value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );

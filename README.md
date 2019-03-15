@@ -4,4 +4,8 @@ this app uses a query from the githubs job search url which fetches data from lo
 
 Updated to Androidx 
 
+App provides RTL support
+
+App is Persistent with recyler position.
+
 

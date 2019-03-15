@@ -11,19 +11,18 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private EditText technologyET;
-    private Button jobSearchButton;
-    private String value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
         technologyET=findViewById( R.id.edit_job_search );
-        jobSearchButton=findViewById( R.id.job_search_button );
+        Button jobSearchButton = findViewById(R.id.job_search_button);
 
     }
 
     public void jobSearch(View view) {
-        value=technologyET.getText().toString();
+        String value = technologyET.getText().toString();
         if (value.equalsIgnoreCase( "" )) {
             AlertDialog.Builder dialog=new AlertDialog.Builder( this );
             dialog.setTitle( "Error" );
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             Intent i=new Intent(this,JobSearchActivity.class  );
-            i.putExtra( getString( R.string.search),value.trim() );
+            i.putExtra( getString( R.string.search), value.trim() );
             startActivity(i);
         }
     }
